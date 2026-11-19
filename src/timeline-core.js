@@ -84,8 +84,7 @@
     MECH.orbitCtl.flyTo(cam);
 
     /* ---- 站点运动学 ---- */
-    MECH.tick(state, ph, pt, dt);
-    state.time = cycleT;
+    MECH.tick(state, ph, pt, dt);        // state.time 由站点自行累计(引擎不覆盖)
     state.seated = MECH.Parts.seatedCount;
     state.phaseId = ph.id;
 
